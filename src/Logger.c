@@ -65,7 +65,7 @@ void seaslog_clear_last_time(TSRMLS_D)
 void seaslog_init_logger(TSRMLS_D)
 {
     SEASLOG_G(base_path) = estrdup(SEASLOG_G(default_basepath));
-
+    SEASLOG_G(base_path_len) = strlen(SEASLOG_G(base_path));
     SEASLOG_G(last_logger) = ecalloc(1,sizeof(logger_entry_t));
     SEASLOG_G(tmp_logger) = ecalloc(1,sizeof(logger_entry_t));
 

@@ -52,6 +52,7 @@ ZEND_BEGIN_MODULE_GLOBALS(seaslog)
     char *current_datetime_format;
     int  current_datetime_format_len;
     char *base_path;
+    size_t base_path_len;
 
     char *host_name;
     int  host_name_len;

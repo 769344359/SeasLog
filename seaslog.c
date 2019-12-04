@@ -578,7 +578,7 @@ PHP_METHOD(SEASLOG_RES_NAME, setBasePath)
         if (SEASLOG_G(base_path))
         {
             efree(SEASLOG_G(base_path));
-
+            SEASLOG_G(base_path_len) = Z_STRLEN_P(_base_path);
             SEASLOG_G(base_path) = estrdup(Z_STRVAL_P(_base_path));
 
             seaslog_init_default_last_logger(TSRMLS_C);
